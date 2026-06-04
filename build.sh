@@ -5,8 +5,8 @@
 
 # Initialize flags for options
 clean=false
-clang=false
-gcc=true
+clang=true
+gcc=false
 
 # Use getopt for parsing long and short options
 while [[ $# -gt 0 ]]; do
@@ -32,7 +32,7 @@ done
 
 SECONDS=0 # builtin bash timer
 
-ZIPNAME="[AOSP]-Spiteful-sweet-$(date '+%Y%m%d-%H%M').zip"
+ZIPNAME="CrDroid-perf-sweet-$(date '+%Y%m%d-%H%M').zip"
 
 export KBUILD_BUILD_USER=vbajs
 export KBUILD_BUILD_HOST=tbyool
@@ -132,7 +132,7 @@ else
 	fi
 fi
 	
-sed -i "s/kernel\.string=.*/kernel.string=Spiteful Kernel by @vbajs on github/" AnyKernel3/anykernel.sh
+sed -i "s/kernel\.string=.*/kernel.string=hi cuite :3/" AnyKernel3/anykernel.sh
 sed -i "s/supported\.versions=.*/supported.versions=11-16/" AnyKernel3/anykernel.sh
 
 cp $kernel AnyKernel3
